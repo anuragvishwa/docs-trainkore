@@ -19,6 +19,8 @@ import CodeView from "./CodeView";
 import Faqs from "@/components/faqs";
 import Resources from "./resources";
 import Pricing from "./pricing/page";
+import ModalVideo from "@/components/modal-video";
+import VideoThumb from "@/public/images/hero-image-01.jpg";
 
 export default function Home() {
   return (
@@ -26,12 +28,13 @@ export default function Home() {
       <Hero />
       {/* <BusinessCategories /> */}
       {/* <VerticalLines /> */}
+
       {/* <BgShapes /> */}
       <FeaturesPlanet />
       <RouteCard />
-
-      <Feedback />
       <CodeView />
+      <Feedback />
+
       {/* <LargeTestimonial />
 
       <Features /> */}

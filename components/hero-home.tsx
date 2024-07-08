@@ -1,5 +1,7 @@
 import PageIllustration from "@/components/page-illustration";
 import BusinessCategories from "./business-categories";
+import ModalVideo from "./modal-video";
+import VideoThumb from "@/public/images/hero-image-01.jpg";
 
 export default function HeroHome() {
   return (
@@ -12,7 +14,7 @@ export default function HeroHome() {
             <div className="text-center">
               <h1
                 className="text-center xl:text-left mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl leading"
-                style={{ letterSpacing: "0.025em" }}
+                style={{ letterSpacing: "0.0125rem" }}
                 data-aos="zoom-y-out"
                 data-aos-delay={150}
               >
@@ -67,7 +69,20 @@ export default function HeroHome() {
             <BusinessCategories />
           </div>
         </div>
-        <div
+
+        <div className="pb-16">
+          <ModalVideo
+            thumb={VideoThumb}
+            thumbWidth={1024}
+            thumbHeight={576}
+            thumbAlt="Modal video thumbnail"
+            video="/videos/video.mp4"
+            videoWidth={1920}
+            videoHeight={1080}
+          />
+        </div>
+
+        {/* <div
           className="mx-auto max-w-3xl pb-16"
           data-aos="zoom-y-out"
           data-aos-delay={600}
@@ -103,7 +118,7 @@ export default function HeroHome() {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

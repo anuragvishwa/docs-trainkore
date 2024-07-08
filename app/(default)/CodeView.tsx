@@ -72,7 +72,7 @@ export default function CodeView() {
               data-aos="fade-up"
               data-aos-anchor="[data-aos-id-features-home]"
             >
-              <div className="relative inline-flex rounded-full before:absolute before:inset-0  before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.00),transparent)]">
+              <div className="relative lg:inline-flex rounded-full before:absolute before:inset-0  before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.00),transparent)]">
                 <CodeTabs />
               </div>
             </div>

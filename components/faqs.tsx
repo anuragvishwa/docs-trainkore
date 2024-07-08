@@ -11,7 +11,6 @@ export default function Faqs() {
       question: "Can I cancel my plan at any time?",
       answer:
         "Yes, but you'll still pay the remainder of the term for the plan you signed up for.",
-      active: true,
     },
     {
       question: "Can I cancel my workspace plan at any time?",
@@ -56,7 +55,6 @@ export default function Faqs() {
                   key={index}
                   title={faq.question}
                   id={`faqs-${index}`}
-                  active={faq.active}
                 >
                   {faq.answer}
                 </Accordion>
