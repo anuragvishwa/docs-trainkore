@@ -54,11 +54,22 @@ export default function Feedback() {
               className="max-w-full md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rounded-md"
               data-aos="fade-up"
               data-aos-anchor="[data-aos-id-features-home]"
+              // style={{
+              //   borderRadius: "8px",
+              //   border: "65px solid transparent",
+              //   borderImage:
+              //     "linear-gradient(to bottom right, rgba(0, 153, 255, 0.4), rgba(0, 102, 204, 0.4)) 0.5",
+              // }}
+
               style={{
+                border: "45px solid",
                 borderRadius: "8px",
-                border: "65px solid transparent",
+                borderColor: "transparent",
                 borderImage:
-                  "linear-gradient(to bottom right, rgba(0, 153, 255, 0.4), rgba(0, 102, 204, 0.4)) 0.5",
+                  "linear-gradient(to bottom right, #FFD8B3, #FFB37C) 1",
+                borderBottom: "none",
+                borderRight: "none",
+                borderTopLeftRadius: "10px",
               }}
             >
               <div className="relative inline-flex overflow-hidden">
