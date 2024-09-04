@@ -1,3 +1,6 @@
+'use client';  // Ensures it's a Client Component
+
+import { useState } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import PageIllustration from "@/components/page-illustration";
 import BusinessCategories from "./business-categories";
@@ -11,6 +14,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function HeroHome() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <section className="relative mt-10">
       <section className="pt-12 bg-gray-50 sm:pt-16">
@@ -20,7 +25,7 @@ export default function HeroHome() {
               Auto Prompt Generation, Model Switching, and Evaluation
             </h1>
             <p className={`mt-5 text-4xl leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight ${plusJakartaSans.className}`} style={{ fontWeight: 700 }}>
-  Prompt Engineering at 85% less
+              Prompt Engineering at 85% less
               <span className="relative inline-flex sm:inline">
                 <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
                 <span className="relative"> cost </span>
@@ -36,7 +41,7 @@ export default function HeroHome() {
               >
                 Try Now
               </a>
-              
+
               <a
                 href="#"
                 title=""
@@ -63,7 +68,22 @@ export default function HeroHome() {
             <div className="absolute inset-0 h-2/3 bg-gray-50"></div>
             <div className="relative mx-auto">
               <div className="lg:max-w-6xl lg:mx-auto">
-                <video className="transform scale-110" src="/videos/yc2024.mp4" controls autoPlay muted loop>
+                {/* Placeholder while video loads */}
+                {!isVideoLoaded && (
+                  <div className="animate-pulse w-full h-96 lg:h-[540px] bg-slate-200">
+                    {/* Placeholder content mimicking the video size */}
+                  </div>
+                )}
+                {/* Actual video */}
+                <video
+                  className={`transform scale-110 ${isVideoLoaded ? '' : 'hidden'}`}
+                  src="/videos/yc2024.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  onLoadedData={() => setIsVideoLoaded(true)}
+                >
                   Your browser does not support the video tag.
                 </video>
               </div>
