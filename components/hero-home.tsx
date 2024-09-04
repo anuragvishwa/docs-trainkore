@@ -1,6 +1,5 @@
 'use client';  // Ensures it's a Client Component
 
-import { useState } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import PageIllustration from "@/components/page-illustration";
 import BusinessCategories from "./business-categories";
@@ -14,8 +13,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function HeroHome() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   return (
     <section className="relative mt-10">
       <section className="pt-12 bg-gray-50 sm:pt-16">
@@ -67,22 +64,15 @@ export default function HeroHome() {
           <div className="relative">
             <div className="absolute inset-0 h-2/3 bg-gray-50"></div>
             <div className="relative mx-auto">
-              <div className="lg:max-w-6xl lg:mx-auto">
-                {/* Placeholder while video loads */}
-                {!isVideoLoaded && (
-                  <div className="animate-pulse w-full h-96 lg:h-[540px] bg-slate-200">
-                    {/* Placeholder content mimicking the video size */}
-                  </div>
-                )}
+              <div className="lg:max-w-6xl lg:mx-auto relative">
                 {/* Actual video */}
                 <video
-                  className={`transform scale-110 ${isVideoLoaded ? '' : 'hidden'}`}
+                  className="transform scale-110 w-full h-96 lg:h-[540px]"
                   src="/videos/yc2024.mp4"
                   controls
                   autoPlay
                   muted
                   loop
-                  onLoadedData={() => setIsVideoLoaded(true)}
                 >
                   Your browser does not support the video tag.
                 </video>
