@@ -10,8 +10,9 @@ export default function FeaturesPlanet() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pt-12 pb-16 text-center md:pb-20">
             <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              Simple helps your teams work more efficiently together
+            Auto prompt generation for any model
             </h2>
+            <p className="text-white mt-5 ">Dynamically generate prompt for various use cases</p>
           </div>
           {/* Planet */}
           <div data-aos="zoom-y-out">
@@ -22,13 +23,9 @@ export default function FeaturesPlanet() {
                   data-aos="zoom-y-out"
                   data-aos-delay={600}
                 >
-                  <Image
-                    src={traincoreImage}
-                    alt="traincore"
-                    className="mb-12 text-center rounded-md"
-                    height={800}
-                    width={1000}
-                  />
+                  <video className="transform scale-110" src="/videos/generate.mp4" controls autoPlay muted loop>
+                                    Your browser does not support the video tag.
+                                </video>
                 </div>
 
                 {/* <Image
@@ -222,23 +219,22 @@ export default function FeaturesPlanet() {
               <div className="md:pr-4 lg:pr-12 xl:pr-16">
                 <div className="mx-auto max-w-3xl pb-6">
                   <h2 className="text-2xl font-bold text-gray-200 md:text-3xl">
-                    Monitor costs, quality, and latency
+                    Observability Suite
                   </h2>
                 </div>
                 <p className="text-xl text-gray-400 mb-4">
-                  Get insights from 40+ metrics and debug with detailed logs and
-                  traces.
+                  Get insights from most important metrics and debug with detailed logs 
                 </p>
 
                 <div className="flex items-start justify-center lg:justify-start mt-8">
                   <div>
                     <div className="text-gray-700 font-medium">
-                      <a
+                      {/* <a
                         className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
                         href="#0"
                       >
                         Observability Suit
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

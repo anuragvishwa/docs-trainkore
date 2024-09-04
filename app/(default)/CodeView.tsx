@@ -97,12 +97,12 @@ export default function CodeView() {
                 <div className="flex items-start justify-center lg:justify-start mt-8">
                   <div>
                     <div className="text-gray-700 font-medium">
-                      <a
+                      {/* <a
                         className="text-blue-600 hover:text-gray-200 transition duration-150 ease-in-out"
                         href="#0"
                       >
                         View Integration Docs
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

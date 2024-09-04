@@ -1,125 +1,76 @@
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import PageIllustration from "@/components/page-illustration";
 import BusinessCategories from "./business-categories";
 import ModalVideo from "./modal-video";
-import VideoThumb from "@/public/images/hero-image-01.jpg";
+
+// Load the Plus Jakarta Sans font with the necessary weights
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
 
 export default function HeroHome() {
   return (
-    <section className="relative">
-      <PageIllustration />
+    <section className="relative mt-10">
+      <section className="pt-12 bg-gray-50 sm:pt-16">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <h1 className={`px-6 text-base text-gray-600 ${plusJakartaSans.className}`}>
+              Auto Prompt Generation, Model Switching, and Evaluation
+            </h1>
+            <p className={`mt-5 text-4xl leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight ${plusJakartaSans.className}`} style={{ fontWeight: 700 }}>
+  Prompt Engineering at 85% less
+              <span className="relative inline-flex sm:inline">
+                <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
+                <span className="relative"> cost </span>
+              </span>
+            </p>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="xl:grid xl:grid-cols-2 md:gap-6 xl:pt-32">
-          <div className="pt-32 xl:pt-20">
-            <div className="text-center">
-              <h1
-                className="text-center xl:text-left mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl leading"
-                style={{ letterSpacing: "0.0125rem" }}
-                data-aos="zoom-y-out"
-                data-aos-delay={150}
+            <div className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9">
+              <a
+                href="#"
+                title=""
+                className={`inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-800 sm:w-auto rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ${plusJakartaSans.className}`}
+                role="button"
               >
-                Develop AI features with confidence
-              </h1>
+                Try Now
+              </a>
+              
+              <a
+                href="#"
+                title=""
+                className={`inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 bg-transparent border border-gray-400 sm:w-auto sm:mt-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 hover:bg-gray-900 hover:text-white ${plusJakartaSans.className}`}
+                role="button"
+              >
+                <svg className="w-5 h-5 mr-2" viewBox="0 0 18 18" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.18003 13.4261C6.8586 14.3918 5 13.448 5 11.8113V5.43865C5 3.80198 6.8586 2.85821 8.18003 3.82387L12.5403 7.01022C13.6336 7.80916 13.6336 9.44084 12.5403 10.2398L8.18003 13.4261Z"
+                    strokeWidth="2"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
 
-              <div className="mx-auto max-w-3xl text-center xl:text-left">
-                <ul
-                  className="mb-8 text-lg text-gray-700 list-none xl:list-disc pl-5"
-                  data-aos="zoom-y-out"
-                  data-aos-delay={300}
-                >
-                  <li className="pb-1">Observability, Metrics, Evals</li>
-
-                  <li className="pb-1">
-                    Prompt Management, Testing, Prompt Playground
-                  </li>
-
-                  <li>Datasets, LLM Evaluations</li>
-                </ul>
-
-                <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
-                  <div
-                    // className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
-                    data-aos="zoom-y-out"
-                    data-aos-delay={450}
-                  >
-                    <a
-                      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                      href="#0"
-                    >
-                      <span className="relative inline-flex items-center">
-                        Start Free Trial
-                        <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                          -&gt;
-                        </span>
-                      </span>
-                    </a>
-                    <a
-                      className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                      href="#0"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
+        <div className="pb-12 bg-white mt-20">
+          <div className="relative">
+            <div className="absolute inset-0 h-2/3 bg-gray-50"></div>
+            <div className="relative mx-auto">
+              <div className="lg:max-w-6xl lg:mx-auto">
+                <video className="transform scale-110" src="/videos/yc2024.mp4" controls autoPlay muted loop>
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
-
-          <div className="pb-12 pb-20 pt-16 xl:pt-8">
-            <BusinessCategories />
-          </div>
         </div>
-
-        <div className="pb-16">
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
-          />
-        </div>
-
-        {/* <div
-          className="mx-auto max-w-3xl pb-16"
-          data-aos="zoom-y-out"
-          data-aos-delay={600}
-        >
-          <div className="relative aspect-video rounded-2xl bg-gray-900 px-5 py-3 shadow-xl before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,theme(colors.slate.300/.8),transparent)1]">
-            <div className="relative mb-8 flex items-center justify-between before:block before:h-[9px] before:w-[41px] before:bg-[length:16px_9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,_theme(colors.gray.600)_4.5px,_transparent_0)] after:w-[41px]">
-              <span className="text-[13px] font-medium text-white">
-                cruip.com
-              </span>
-            </div>
-            <div className="font-mono text-gray-500 [&_span]:opacity-0">
-              <span className="animate-[code-1_10s_infinite] text-gray-200">
-                4 hrs to set up emails
-              </span>{" "}
-              <span className="animate-[code-2_10s_infinite]">
-                + 6 hrs designing a landing page
-              </span>
-              <br />
-              <span className="animate-[code-3_10s_infinite]">
-                + 4 hrs to handle Stripe webhooks
-              </span>{" "}
-              <span className="animate-[code-4_10s_infinite]">
-                + 2 hrs for SEO tags
-              </span>
-              <br />
-              <br />
-              <span className="animate-[code-5_10s_infinite] text-gray-200">
-                + 1 hr applying for Google Oauth
-              </span>
-              <br />
-              <span className="animate-[code-6_10s_infinite]">
-                + ∞ hrs overthinking...
-              </span>
-            </div>
-          </div>
-        </div> */}
-      </div>
+      </section>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "TrainKore",
+  description: "Save upto 85% in prompt engineering",
 };
 
 import Hero from "@/components/hero-home";
@@ -41,8 +41,8 @@ export default function Home() {
       <Pricing />
 
       <TestimonialsCarousel />
-      <Faqs />
-      <Cta />
+      {/* <Faqs /> */}
+      {/* <Cta /> */}
     </>
   );
 }
