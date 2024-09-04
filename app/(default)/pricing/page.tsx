@@ -1,7 +1,5 @@
-export const metadata = {
-  title: "Pricing - Simple",
-  description: "Page description",
-};
+'use client'; // Ensures it's a Client Component
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
 import PricingTables from "@/components/pricing-tables";
 import ComparePlans from "@/components/compare-plans";
@@ -9,13 +7,20 @@ import TestimonialsGrid from "@/components/testimonials-grid";
 import Faqs from "@/components/faqs";
 import Cta from "@/components/cta-alternative";
 
+// Load the Plus Jakarta Sans font with the necessary weights
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
 export default function Pricing() {
   return (
     <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center xl:max-w-4xl">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
-            The only platform that creates unique & rare UI Kits with TailwindCSS
+          <h2 className={`text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ${plusJakartaSans.className}`}>
+          Model agnostic template for every model
           </h2>
         </div>
 
@@ -32,23 +37,23 @@ export default function Pricing() {
 
           <div className="relative grid grid-cols-1 px-16 py-12 overflow-hidden text-center bg-white sm:grid-cols-2 gap-y-12 lg:grid-cols-4 rounded-2xl gap-x-20">
             <div className="flex flex-col items-center">
-              <p className="text-5xl font-bold text-gray-900 lg:mt-3 lg:order-2 font-pj">110+</p>
-              <h3 className="mt-5 text-sm font-bold tracking-widest text-gray-600 uppercase lg:mt-0 lg:order-1 font-pj">Blocks</h3>
+              <p className={`text-3xl font-bold text-gray-800 lg:mt-3 lg:order-2 ${plusJakartaSans.className}`}>Prompt Generation</p>
+              <h3 className={`mt-5 text-sm font-bold tracking-widest text-gray-800 uppercase lg:mt-0 lg:order-1 ${plusJakartaSans.className}`}>Auto</h3>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-5xl font-bold text-gray-900 lg:mt-3 lg:order-2 font-pj">29</p>
-              <h3 className="mt-5 text-sm font-bold tracking-widest text-gray-600 uppercase lg:mt-0 lg:order-1 font-pj">Templates</h3>
+              <p className={`text-3xl font-bold text-gray-800 lg:mt-3 lg:order-2 ${plusJakartaSans.className}`}>Model Switching</p>
+              <h3 className={`mt-5 text-sm font-bold tracking-widest text-gray-800 uppercase lg:mt-0 lg:order-1 ${plusJakartaSans.className}`}>Optimized</h3>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-5xl font-bold text-gray-900 lg:mt-3 lg:order-2 font-pj">3400+</p>
-              <h3 className="mt-5 text-sm font-bold tracking-widest text-gray-600 uppercase lg:mt-0 lg:order-1 font-pj">Customers</h3>
+              <p className={`text-3xl font-bold text-gray-800 lg:mt-3 lg:order-2 ${plusJakartaSans.className}`}>Monitor Usage</p>
+              <h3 className={`mt-5 text-sm font-bold tracking-widest text-gray-800 uppercase lg:mt-0 lg:order-1 ${plusJakartaSans.className}`}>Observability</h3>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-5xl font-bold text-gray-900 lg:mt-3 lg:order-2 font-pj">2844</p>
-              <h3 className="mt-5 text-sm font-bold tracking-widest text-gray-600 uppercase lg:mt-0 lg:order-1 font-pj">Support Tickets</h3>
+              <p className={`text-3xl font-bold text-gray-800 lg:mt-3 lg:order-2 ${plusJakartaSans.className}`}>Prompt Evaluation</p>
+              <h3 className={`mt-5 text-sm font-bold tracking-widest text-gray-800 uppercase lg:mt-0 lg:order-1 ${plusJakartaSans.className}`}>Iteratively</h3>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import Hero from "@/components/hero-home";
 import BusinessCategories from "@/components/business-categories";
 import LargeTestimonial from "@/components/large-testimonial";
 import FeaturesPlanet from "@/components/features-planet";
+import FeaturesLog from "@/components/features-log";
 import Features from "@/components/features-home";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
 import Cta from "@/components/cta";
@@ -34,13 +35,14 @@ export default function Home() {
       <RouteCard />
       <CodeView />
       <Feedback />
+      <FeaturesLog />
 
       {/* <LargeTestimonial />
 
       <Features /> */}
       <Pricing />
 
-      <TestimonialsCarousel />
+      {/* <TestimonialsCarousel /> */}
       {/* <Faqs /> */}
       {/* <Cta /> */}
     </>

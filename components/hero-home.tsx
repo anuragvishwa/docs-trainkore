@@ -31,7 +31,7 @@ export default function HeroHome() {
 
             <div className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9">
               <a
-                href="#"
+                href="https://app.trainkore.com"
                 title=""
                 className={`inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-800 sm:w-auto rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ${plusJakartaSans.className}`}
                 role="button"

@@ -7,147 +7,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
+          className={`flex justify-between items-center py-8 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
         >
-          {/* 1st block */}
-          <div className="space-y-2 sm:col-span-12 lg:col-span-4">
+          {/* 1st block (Logo and copyright) */}
+          <div className="space-y-2">
             <div>
               <Logo />
             </div>
             <div className="text-sm text-gray-600">
-              &copy; Cruip.com - All rights reserved.
+              &copy; trainkore.com - All rights reserved.
             </div>
           </div>
 
-          {/* 2nd block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Product</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Integrations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Pricing & Plans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Changelog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Our method
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 3rd block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Diversity & Inclusion
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Financial statements
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 4th block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Terms of service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Report a vulnerability
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 5th block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Social</h3>
-            <ul className="flex gap-1">
+          {/* Social block (Aligned to the right) */}
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium pl-2">Social</h3>
+            <ul className="flex gap-2">
               <li>
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
@@ -167,14 +42,14 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
                   href="#0"
-                  aria-label="Medium"
+                  aria-label="LinkedIn"
                 >
                   <svg
                     className="h-8 w-8 fill-current"
                     viewBox="0 0 32 32"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z"></path>
+                    <path d="M27 0H5C2.2 0 0 2.2 0 5v22c0 2.8 2.2 5 5 5h22c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zm-5 24h-4v-7c0-1.7-1.3-3-3-3s-3 1.3-3 3v7h-4V12h4v2c1-1.5 2.7-2.5 4.5-2.5 3 0 5.5 2.5 5.5 5.5v7zm-11-8.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-1-3.5h2v-4h-2v4z"></path>
                   </svg>
                 </Link>
               </li>
@@ -197,9 +72,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
           </div>
         </div>
       </div>
-
-      {/* Big text */}
-  
     </footer>
   );
 }

@@ -9,33 +9,33 @@ export default function CodeTabs() {
   const tabsRef = useRef<HTMLDivElement>(null);
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
-  const codeString = `import Portkey from 'portkey-ai';
-  const portkey = new Portkey()
+  const codeString = `import Trainkore from 'trainkore-ai';
+  const trainkore = new Trainkore()
 
-  const chat = await portkey.chat.completions.create({
+  const chat = await trainkore.chat.completions.create({
     messages: [{ role: 'user', content: 'Say this is a test' }],
-    model: 'gpt-4,
+    model: 'gpt-4o,
   });
 
   console.log(chat.choices);`;
 
-  const pythonCode = `from portkey_ai import Portkey
-portkey = Portkey()
+  const pythonCode = `from trainkore_ai import Trainkore
+trainkore = Trainkore()
 
-chat = portkey.chat.completions.create(
+chat = trainkore.chat.completions.create(
     messages = [{ "role": 'user', "content": 'Say this is a test' }],
-    model = 'gpt-4
+    model = 'gpt-4o
 )
 
 print(chat.choices)`;
 
-  const curlCode = `curl https://api.portkey.ai/v1/chat/completions \\
+  const curlCode = `curl https://api.trainkore.com/v1/chat/completions \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer $OPENAI_API_KEY" \\
   -H "x-portkey-api-key: $PORTKEY_API_KEY" \\
   -H "x-portkey-provider: openai" \\
   -d '{
-    "model": "gpt-4",
+    "model": "gpt-4o",
     "messages": [{
         "role": "user",
         "content": "Say this is a test."

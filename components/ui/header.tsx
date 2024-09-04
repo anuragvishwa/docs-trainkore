@@ -32,24 +32,24 @@ export default function Header() {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
-            {/* Desktop menu links */}
+        
             <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
-              <li className="px-3 py-1">
+              {/* <li className="px-3 py-1">
                 <Link
                   href="/pricing"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Pricing
                 </Link>
-              </li>
-              <li className="px-3 py-1">
+              </li> */}
+              {/* <li className="px-3 py-1">
                 <Link
-                  href="/customers"
+                  href="/docs"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
-                  Customers
+                  Docs
                 </Link>
-              </li>
+              </li> */}
               <li className="px-3 py-1">
                 <Link
                   href="/blog"
@@ -66,9 +66,9 @@ export default function Header() {
                   Docs
                 </Link>
               </li>
-              {/* 1st level: hover */}
-              <Dropdown title="Extra">
-                {/* 2nd level: hover */}
+             
+              {/* <Dropdown title="Extra">
+              
                 <li>
                   <Link
                     href="/support"
@@ -85,26 +85,26 @@ export default function Header() {
                     Apps
                   </Link>
                 </li>
-              </Dropdown>
+              </Dropdown> */}
             </ul>
           </nav>
 
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
-            <li>
+            {/* <li>
               <Link
                 href="/signin"
                 className="btn-sm bg-white text-gray-800 shadow hover:bg-gray-50"
               >
                 Login
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                href="/signup"
+                href="https://app.trainkore.com"
                 className="btn-sm bg-gray-800 text-gray-200 shadow hover:bg-gray-900"
               >
-                Register
+                Login
               </Link>
             </li>
           </ul>
