@@ -22,7 +22,7 @@ export default function HeroHome() {
               Auto Prompt Generation, Model Switching, and Evaluation
             </h1>
             <p className={`mt-5 text-4xl leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight ${plusJakartaSans.className}`} style={{ fontWeight: 700 }}>
-            Automate Prompts Save 85% 
+              Automate Prompts Save 85% 
               <span className="relative inline-flex sm:inline">
                 <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
                 <span className="relative"> cost </span>
@@ -65,17 +65,28 @@ export default function HeroHome() {
             <div className="absolute inset-0 h-2/3 bg-gray-50"></div>
             <div className="relative mx-auto">
               <div className="lg:max-w-6xl lg:mx-auto relative">
+                {/* Add the gradient background around the video */}
+                <div className="absolute -inset-4">
+                  <div
+                    className="w-full h-full mx-auto opacity-20 blur-lg filter"
+                    style={{
+                      background: "linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)",
+                    }}
+                  ></div>
+                </div>
                 {/* Actual video */}
-                <video
-                  className="transform scale-110 w-full h-96 lg:h-[540px]"
-                  src="/videos/yc2024.mp4"
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <div className="relative">
+                  <video
+                    className="transform scale-110 w-full h-96 lg:h-[540px]"
+                    src="/videos/yc2024.mp4"
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
