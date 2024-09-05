@@ -22,7 +22,7 @@ export default function HeroHome() {
               Auto Prompt Generation, Model Switching, and Evaluation
             </h1>
             <p className={`mt-5 text-4xl leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight ${plusJakartaSans.className}`} style={{ fontWeight: 700 }}>
-              Prompt Engineering at 85% less
+            Automate Prompts Save 85% 
               <span className="relative inline-flex sm:inline">
                 <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0"></span>
                 <span className="relative"> cost </span>
