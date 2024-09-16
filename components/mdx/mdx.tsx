@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import PostLink from "./link";
 import PostImage from "./image";
 import PostBanner from "./banner";
+import PostAccordion from "../accordion";
 import rehypePrettyCode from "rehype-pretty-code";
 
 const transformToSlug = (input: string) => {
@@ -40,6 +41,7 @@ const mdxComponents = {
   Link: PostLink,
   Image: PostImage,
   Banner: PostBanner,
+  Accordion: PostAccordion,
 };
 
 export function CustomMDX(props: any) {
