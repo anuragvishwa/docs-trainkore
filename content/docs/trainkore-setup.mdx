@@ -24,82 +24,85 @@ npm install trainkore
 
 ### Initialize Trainkore SDK
 
-To start using the SDK, initialize it with your API key. The API key can be found on the Trainkore platform.
+To start using the SDK, you need to initialize it with your API key. The API key can be found on the Trainkore platform. Here we are using a service class to manage the Trainkore instance.
 
 ```bash
-import Trainkore from 'trainkore';
+import Trainkore from "trainkore";
 
-const apiKey = 'your-trainkore-api-key';  // Replace with your API key(Settings page)
+class TrainkoreService {
+  private trainkore: Trainkore;
 
-const trainkore = new Trainkore(apiKey);
-```
+  constructor(apiKey: string) {
+    this.trainkore = new Trainkore(apiKey);
+  }
 
-## Create a Chat Prompt
+  // Method to create a chat prompt
+  async createChatPrompt() {
+    try {
+      const chatPrompt = await this.trainkore.chatPrompt.create({
+        projId: "your-project-id",  // Replace with your project ID
+        versionId: "your-version-id",  // Replace with your version ID
+        userId: "your-user-id",  // Replace with your user ID
+        userInput: {
+          userInput: {
+            "1": "write an email on taking leave from office",
+            "2": "Write an essay on {{topic}}",
+            "3": "Tell me more about {{movie_name}}"
+          },
+          selectedOptions: {
+            "1": { value: "user", label: "user" },
+            "2": { value: "user", label: "user" },
+            "3": { value: "user", label: "user" }
+          },
+          inputValue: {
+            topic: "dhoni",
+            movie_name: "My Name is Khan"
+          },
+          imageCards: {}
+        },
+        userInputData: {
+          userInputData: {
+            "1": "Who is lord Ram?",
+            "2": "Who is Aamir khan?",
+            "3": "Write python code to get maximum number in an array"
+          },
+          selectedOptionsData: {
+            "1": { value: "user", label: "user" },
+            "2": { value: "user", label: "user" },
+            "3": { value: "human", label: "user" }
+          }
+        },
+        parametersValue: {
+          stopSliderValue: 50,
+          topP: 0.1,
+          temperature: 0.3,
+          max_tokens: 150,
+          frequency_penalty: 0.1,
+          presence_penalty: 0.1,
+          model: { value: "custom_model", label: "custom_model" }
+        }
+      });
 
-Once the SDK is initialized, you can create a chat prompt by calling the create method.
+      console.log("Chat Prompt Created:", chatPrompt);
+      return chatPrompt;
+    } catch (error: any) {
+      console.error("Error creating chat prompt:", error.message);
+      throw error;
+    }
+  }
+}
 
-```bash
+// Example usage
+const apiKey = 'your-api-key-here';  // Replace with your actual API key
+const service = new TrainkoreService(apiKey);
 
 (async () => {
   try {
-    const chatPrompt = await trainkore.chatPrompt.create({
-      projId: 'your-project-id',
-      versionId: 'your-version-id',
-      userId: 'your-user-id',
-      userInput: {
-        userInput: {
-          '1': 'write an email on taking leave from office',
-          '2': 'Write an essay on {{topic}}',
-          '3': 'Tell me more about {{movie_name}}'
-        },
-        selectedOptions: {
-          '1': { value: 'user', label: 'user' },
-          '2': { value: 'user', label: 'user' },
-          '3': { value: 'user', label: 'user' }
-        },
-        inputValue: {
-          topic: 'dhoni',
-          movie_name: 'My Name is Khan'
-        }
-      },
-      "userInputData": {
-        "userInputData": {
-          "1" :"Who is lord Ram?",
-          "2" :"Who is Aamir khan?",
-          "3" :"Write python code to get maximum number in an array"
-
-        },
-        "selectedOptionsData": {
-            "1": {
-                "value": "user",
-                "label": "user"
-            },
-            "2": {
-                "value": "user",
-                "label": "user"
-            },
-            "3": {
-                "value": "human",
-                "label": "user"
-            }
-        }
-    },
-      parametersValue: {
-        stopSliderValue: 50,
-        topP: 0.1,
-        temperature: 0.3,
-        max_tokens: 150,
-        frequency_penalty: 0.1,
-        presence_penalty: 0.1,
-        model: { value: 'gpt-4o', label: 'gpt-4o' }
-      }
-    });
-    console.log('Chat Prompt Created:', chatPrompt);
-  } catch (error) {
-    console.error('Error creating chat prompt:', error.message);
+    await service.createChatPrompt();
+  } catch (error: any) {
+    console.error("Error occurred:", error.message);
   }
 })();
-
 ```
 
 ## Retrieve a Chat Prompt by ID
